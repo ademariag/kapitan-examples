@@ -13,7 +13,7 @@ spec:
       containers:
         - args:
             - --verbose=False
-            - --secret=?{ref:targets/prod-sea/tuna:7d3096e2}
+            - --secret=?{plain:$PWD/secrets/targets/prod-sea/tuna|randomstr}
             - --brine
             - --canned
           image: alledm/tuna:v2.0.0
