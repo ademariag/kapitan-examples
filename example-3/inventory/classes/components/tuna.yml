@@ -7,7 +7,7 @@ parameters:
     replicas: ${replicas}
     args:
     - --verbose=${verbose}
-    - --secret=?{ref:targets/${target}/tuna|randomstr}
+    - --secret=?{plain:$PWD/secrets/targets/${target}/tuna|randomstr}
 
   kapitan:
     mains:
